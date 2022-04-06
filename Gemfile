@@ -16,28 +16,20 @@ gem 'webpacker', '~> 5.0'
 gem 'turbolinks', '~> 5'
 # Build JSON APIs with ease. Read more: https://github.com/rails/jbuilder
 gem 'jbuilder', '~> 2.7'
-# Use Redis adapter to run Action Cable in production
-# gem 'redis', '~> 4.0'
-# Use Active Model has_secure_password
-gem 'bcrypt', '~> 3.1.7'
+
 
 # Use Active Storage variant
-# gem 'image_processing', '~> 1.2'
-
-# Reduces boot times through caching; required in config/boot.rb
-gem 'bootsnap', '>= 1.4.4', require: false
-
-gem 'faker'
-gem 'carrierwave'
+gem 'image_processing'
 gem 'mini_magick'
-gem 'fog'
+gem 'active_storage_validations'
+gem 'bcrypt'
+gem 'faker'
 gem 'will_paginate'
 gem 'bootstrap-will_paginate'
 gem 'bootstrap-sass'
-gem 'uglifier'
-gem 'coffee-rails'
-gem 'jquery-rails'
-gem 'rails-html-sanitizer'
+
+# Reduces boot times through caching; required in config/boot.rb
+gem 'bootsnap', '>= 1.4.4', require: false
 
 group :development, :test do
   # Use sqlite3 as the database for Active Record
@@ -63,6 +55,11 @@ group :test do
   gem 'selenium-webdriver', '>= 4.0.0.rc1'
   # Easy installation and use of web drivers to run system tests with browsers
   gem 'webdrivers'
+  gem 'rails-controller-testing'
+  gem 'minitest'
+  gem 'minitest-reporters'
+  gem 'guard'
+  gem 'guard-minitest'
 end
 
 group :production do
